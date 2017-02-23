@@ -21,6 +21,11 @@ grails.project.dependency.resolution = {
             excludes 'ejb', 'jsf-api', 'servlet-api', 'jsp-api', 'jstl', 'jms',
                      'connector-api', 'ehcache-core', 'slf4j-api', 'commons-logging'
         }
+
+				build ('org.kuali.maven.wagons:maven-s3-wagon:1.1.22') {
+				    export = false
+				    excludes 'slf4j-log4j12', 'slf4j-api', 'jcl-over-slf4j'
+				}
     }
 
     plugins {
